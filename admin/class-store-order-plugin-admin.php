@@ -177,9 +177,9 @@ class Store_Order_Plugin_Admin {
 	
 		$note_by_customer=$order->get_customer_note();
 	
-		 $shop_name="Touhidul_shop";
-		 $shop_url="http://store-order.test/";
-		 $shop_secret="6LfMrM4ZAAAAAC28XE9r7rM13ymUyKiJXLGiwOJo";
+		 $shop_name=get_option('shop_name');
+		 $shop_url=get_option('shop_url');
+		 $shop_secret=get_option('shop_secret');
 		 
 		 $order_date=$order->get_date_created()->format( 'Y-m-d');
 		 $current_date = new DateTime($order_date);
